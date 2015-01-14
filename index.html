@@ -7,8 +7,12 @@
 			<header>
 				<h1>Rugby Scoring Model</h1>
 			</header>
+      <article>
+        <section>Your inputs</section>
+        <section>Results of the game</section>
+      </article>
 			<script>
-				function Team (name, offense, defense) {
+				function Team(name, offense, defense) {
 					this.name = name;
 					this.offense = offense;
 					this.defense = defense;
@@ -18,34 +22,39 @@
 				Team.prototype.score = [];
 				var time = 80;
 				var possessions = 20;
-				function try() {
-						Team.score.push("5");
-						var convert = Math.round(Math.random * 2);
-							if (convert = 1){
+
+// Need to create functionality to determine posession. 
+
+				function scoreTry() {
+						score.push("5");
+						var convert = Math.round(Math.random * 2 + 1);
+							if (convert == 1){
 								Team.prototype.score.push("2");
 							}
-				};
-				function penalty() {
-					Team.prototype.score.push("3")
-				};
-				function dropGoal() {
-					Team.prototype.score.push("3")
-				};
+				}
+				// function penalty() {
+    //       var scoreA = Team.prototype.score[0];
+				// 	Team.prototype.score.push(scoreA += "3");
+				// }
+				// function dropGoal() {
+    //       var scoreB = Team.prototype.score[0];
+				// 	Team.prototype.score.push(scoreB += "3");
+				// }
 				function playGame(){
 					for (var i = 0; i < possessions; i++){
 						var calculation = Math.round(Math.random * 10);
 						if (calculation <= 4){
-							try();
+							scoreTry();
 						}
-						else if (calculation <=7){
-							penalty();
-						}
-						else {
-							dropGoal();
-						}
+						// else if (calculation <=7){
+						// 	penalty();
+						// }
+						// else {
+						// 	dropGoal();
+						// }
 						console.log (Team.prototype.score);
 					}
-				};
+				}
 				playGame();
 			</script>
 		</body>
