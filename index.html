@@ -22,28 +22,31 @@
 						Team.score.push("5");
 						var convert = Math.round(Math.random * 2);
 							if (convert = 1){
-								Team.score.push("2");
+								Team.prototype.score.push("2");
 							}
 				};
-				goal.prototype.penalty = Team.score.push("3");
-				goal.prototype.dropGoal = Team.score.push("3");
+				function penalty() {
+					Team.prototype.score.push("3")
+				};
+				function dropGoal() {
+					Team.prototype.score.push("3")
+				};
 				function playGame(){
-					for (var i = 0; i < Game.possessions; i++){
+					for (var i = 0; i < possessions; i++){
 						var calculation = Math.round(Math.random * 10);
 						if (calculation <= 4){
-							try;
+							try();
 						}
 						else if (calculation <=7){
-							penalty;
+							penalty();
 						}
 						else {
-							dropGoal;
+							dropGoal();
 						}
-						
-
-						return Game.score;
+						console.log (Team.prototype.score);
 					}
 				};
+				playGame();
 			</script>
 		</body>
 	</html>
