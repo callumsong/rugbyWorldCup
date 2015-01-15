@@ -1,59 +1,67 @@
 <DOCTYPE!>
-	<html>
-		<head>
-			<title></title>
-		</head>
-		<body>
-			<header>
-				<h1>Rugby Scoring Model</h1>
-			</header>
+  <html>
+    <head>
+      <title></title>
+    </head>
+    <body>
+      <header>
+        <h1>Rugby Scoring Model</h1>
+      </header>
       <article>
         <section>Your inputs</section>
         <section>Results of the game</section>
       </article>
-			<script>
-				function Team(name, offense, defense) {
-					this.name = name;
-					this.offense = offense;
-					this.defense = defense;
-				}
-				allBlacks = new Team("All Blacks", 7, 8);
-				eagles = new Team("Eagles", 4, 4);
-				var time = 80;
-				var possessions = 20;
+      <script>
+        function Team(name, offense, defense) {
+          this.name = name;
+          this.offense = offense;
+          this.defense = defense;
+          this.posessionChance = 50;
+        }
+        allBlacks = new Team("All Blacks", 7, 8);
+        eagles = new Team("Eagles", 4, 4);
+        var time = 80;
+        var possessions = 20;
+        // function superiority (a,b){
+        //  a.posessionChance + ((a.offense - b.defense)*2);
+        // };
+        // superiority (allBlacks, eagles);
+        // console.log(allBlacks.posessionChance);
+  // Need to create functionality to determine posession. 
 
-// Need to create functionality to determine posession. 
-
-				 Team.prototype.scoreTry = function() {
-							this.score.push("5");
-							var convert = Math.round(Math.random() * 2 + 1);
-								if (convert == 1){
-									this.score.push("2");
-								}
-				 };
-				Team.prototype.penalty = function() {
-					this.score.push("3");
-				};
-				Team.prototype.dropGoal = function() {
-					this.score.push("3");
-				};
-				Team.prototype.playGame = function() {
-					this.score = [];
-					for (var i = 0; i < possessions; i++){
-						var calculation = Math.round(Math.random() * 10);
-						if (calculation <= 4){
-							this.scoreTry();
-						}
-						else if (calculation <=7){
-							this.penalty();
-						}
-						else {
-							this.dropGoal();
-						}
-					}
-						console.log (this.score);
-				};
-				allBlacks.playGame();
-			</script>
-		</body>
-	</html>
+        Team.prototype.scoreTry = function() {
+          this.score.push("5");
+          var convert = Math.round(Math.random() * 2 + 1);
+          if (convert == 1){
+            this.score.push("2");
+          }
+        };
+        Team.prototype.penalty = function() {
+          this.score.push("3");
+        };
+        Team.prototype.dropGoal = function() {
+          this.score.push("3");
+        };
+        Team.prototype.playGame = function() {
+          this.score = [];
+          for (var i = 0; i < possessions; i++){
+            var calculation = Math.round(Math.random() * 10);
+            if (calculation <= 2){
+              this.scoreTry();
+            }
+            else if (calculation <= 5){
+              this.penalty();
+            }
+            else if (calculation <= 7){
+              this.dropGoal();
+            }
+            else{
+              this.score.push("0");
+            }
+          }
+            console.log (this.score);
+        };
+        allBlacks.playGame();
+      </script>
+    </body>
+  </html>
