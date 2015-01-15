@@ -16,46 +16,44 @@
 					this.name = name;
 					this.offense = offense;
 					this.defense = defense;
-				};
+				}
 				allBlacks = new Team("All Blacks", 7, 8);
 				eagles = new Team("Eagles", 4, 4);
-				Team.prototype.score = [];
 				var time = 80;
 				var possessions = 20;
 
 // Need to create functionality to determine posession. 
 
-				function scoreTry() {
-						score.push("5");
-						var convert = Math.round(Math.random * 2 + 1);
-							if (convert == 1){
-								Team.prototype.score.push("2");
-							}
-				}
-				// function penalty() {
-    //       var scoreA = Team.prototype.score[0];
-				// 	Team.prototype.score.push(scoreA += "3");
-				// }
-				// function dropGoal() {
-    //       var scoreB = Team.prototype.score[0];
-				// 	Team.prototype.score.push(scoreB += "3");
-				// }
-				function playGame(){
+				 Team.prototype.scoreTry = function() {
+							this.score.push("5");
+							var convert = Math.round(Math.random() * 2 + 1);
+								if (convert == 1){
+									this.score.push("2");
+								}
+				 };
+				Team.prototype.penalty = function() {
+					this.score.push("3");
+				};
+				Team.prototype.dropGoal = function() {
+					this.score.push("3");
+				};
+				Team.prototype.playGame = function() {
+					this.score = [];
 					for (var i = 0; i < possessions; i++){
-						var calculation = Math.round(Math.random * 10);
+						var calculation = Math.round(Math.random() * 10);
 						if (calculation <= 4){
-							scoreTry();
+							this.scoreTry();
 						}
-						// else if (calculation <=7){
-						// 	penalty();
-						// }
-						// else {
-						// 	dropGoal();
-						// }
-						console.log (Team.prototype.score);
+						else if (calculation <=7){
+							this.penalty();
+						}
+						else {
+							this.dropGoal();
+						}
 					}
-				}
-				playGame();
+						console.log (this.score);
+				};
+				allBlacks.playGame();
 			</script>
 		</body>
 	</html>
