@@ -16,21 +16,26 @@
 					this.name = name;
 					this.offense = offense;
 					this.defense = defense;
+					this.posessionChance = 50;
 				}
 				allBlacks = new Team("All Blacks", 7, 8);
 				eagles = new Team("Eagles", 4, 4);
 				var time = 80;
 				var possessions = 20;
-
+				// function superiority (a,b){
+				// 	a.posessionChance + ((a.offense - b.defense)*2);
+				// };
+				// superiority (allBlacks, eagles);
+				// console.log(allBlacks.posessionChance);
 // Need to create functionality to determine posession. 
 
-				 Team.prototype.scoreTry = function() {
-							this.score.push("5");
-							var convert = Math.round(Math.random() * 2 + 1);
-								if (convert == 1){
-									this.score.push("2");
-								}
-				 };
+				Team.prototype.scoreTry = function() {
+					this.score.push("5");
+					var convert = Math.round(Math.random() * 2 + 1);
+					if (convert == 1){
+						this.score.push("2");
+					}
+				};
 				Team.prototype.penalty = function() {
 					this.score.push("3");
 				};
@@ -41,14 +46,17 @@
 					this.score = [];
 					for (var i = 0; i < possessions; i++){
 						var calculation = Math.round(Math.random() * 10);
-						if (calculation <= 4){
+						if (calculation <= 2){
 							this.scoreTry();
 						}
-						else if (calculation <=7){
+						else if (calculation <= 5){
 							this.penalty();
 						}
-						else {
+						else if (calculation <= 7){
 							this.dropGoal();
+						}
+						else{
+							this.score.push("0");
 						}
 					}
 						console.log (this.score);
