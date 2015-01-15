@@ -16,57 +16,67 @@
 					this.name = name;
 					this.offense = offense;
 					this.defense = defense;
-				};
-				allBlacks = new Team("All Blacks", 7, 8);
-				eagles = new Team("Eagles", 4, 4);
-				Team.prototype.score = [];
+				}
+				var allBlacks = new Team("All Blacks", 7, 8);
+				var eagles = new Team("Eagles", 4, 4);
 				var time = 80;
 				var possessions = 20;
-                                  //Will need to take all these Scoring options and wrap them into one class to call in the functions below when possession is detemined. 
-				// function scoreTry() {
-				// 		Team.prototype.score.push("5");
-				// 		var convert = Math.round(Math.random * 2 + 1);
-				// 			if (convert == 1){
-				// 				Team.prototype.score.push("2");
-				// 			}
-				// }
-				// function penalty() {
-    //       var scoreA = Team.prototype.score[0];
-				// 	Team.prototype.score.push(scoreA += "3");
-				// }
-				// function dropGoal() {
-    //       var scoreB = Team.prototype.score[0];
-				// 	Team.prototype.score.push(scoreB += "3");
-				// }
-				function playGame(){
-          function hasBall() { 
-            var teams = Math.random() * 10;
-            if (teams <=5) {
-              //need to wrap up all the scoring options into one object to call here
-              console.log(allBlacks.prototype.score.push()); //will include return to HTML element
+        Team.prototype.scoreTry = function() {
+          this.score.push("5");
+          var convert = Math.round(Math.random() * 2 + 1);
+          if (convert == 1){
+            this.score.push("2");
+          }
+        };
+        Team.prototype.penalty = function() {
+          this.score.push("3");
+        };
+        Team.prototype.dropGoal = function() {
+          this.score.push("3");
+        };
+        Team.prototype.playGame = function() {
+          this.score = [];
+          for (var i = 0; i < possessions; i++){
+            var calculation = Math.round(Math.random() * 10);
+            if (calculation <= 4){
+              this.scoreTry();
+            }
+            else if (calculation <=7){
+              this.penalty();
             }
             else {
-              //need to wrap up all the scoring options into one object to call here
-              console.log(eagles.prototype.score.push(); //will include return to HTML element
+              this.dropGoal();
             }
           }
-					function posessions() {
-            for (var i = 0; i < possessions; i++){
-  						var calculation = Math.round(Math.random() * 10);
-  						if (calculation <= 4){
-  							scoreTry();
-  						}
-  						else if (calculation <=7){
-  							penalty();
-  						}
-  						else {
-  							dropGoal();
-  						}
+        }
+        function hasBall() {
+          var teams = Math.random() * 10;
+          if (teams <=5) {
+          //need to wrap up all the scoring options into one object to call here
+          console.log(allBlacks.prototype.score.push()); //will include return to HTML element
+          }
+          else {
+            //need to wrap up all the scoring options into one object to call here
+            console.log(eagles.prototype.score.push(); //will include return to HTML element
+          }
+          console.log (this.score);
+        }
+        function posessions() {
+          for (var i = 0; i < possessions; i++){
+            var calculation = Math.round(Math.random() * 10);
+            if (calculation <= 4){
+              scoreTry();
             }
-						console.log (Team.prototype.score);
-					}
-				}
-				playGame();
+            else if (calculation <=7){
+              penalty();
+            }
+            else {
+              dropGoal();
+            }
+          }
+          console.log (Team.prototype.score);
+        }
+        allBlacks.playGame();
 			</script>
 		</body>
 	</html>
