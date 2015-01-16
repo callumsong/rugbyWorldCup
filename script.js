@@ -43,7 +43,8 @@ Team.prototype.addPoints = function(anArray){
   }
   return this.totalPoints;
 };
-allBlacks = new Team("All Blacks", 7, 8);
+
+allBlacks = new Team(document.getElementById("Team A Name"), document.getElementById("Team A Offense"), document.getElementById("Team A Defense"));
 eagles = new Team("Eagles", 4, 4);
 eagles.myBallAbility = (eagles.offense - allBlacks.defense)*0.5;
 allBlacks.myBallAbility = (allBlacks.offense - eagles.defense)*0.5;
