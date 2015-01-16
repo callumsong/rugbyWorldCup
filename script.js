@@ -32,17 +32,17 @@ function Team(name, offense, defense) { //user-defined fields
           }
         };
         function Game() { // run upon user clicking submit button
-          function hasBall() { //determine which team has the ball
+          hasBall = function() { //determine which team has the ball
             var teams = Math.random() * 10;
             if (teams <= 5) {
               return allBlacks;
             }
             else {
-              return eagles;  
+              return eagles;
             }
             console.log(hasBall);
-          })();
-          function playGame() { 
+          }();
+          function playGame() {
             if (hasBall == eagles) {
               eagles.scoreType();
               console.log(eagles.points);
