@@ -1,12 +1,17 @@
 html {
-  background-color: #4c4c4c;
+  background-color: #b2b2b2;
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 20px;
   /*text-decoration: none;*/
 }
 
-h1 {
+.title_text {
   font-size: 30px;
+  text-align: center;
+}
+
+.about_us {
+  text-align: center;
 }
 
 .left_media {
@@ -15,4 +20,8 @@ h1 {
 
 .std_padding {
   padding: 5px;
+}
+
+footer {
+  text-align: center;
 }
