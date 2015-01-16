@@ -2,77 +2,93 @@
   <html>
     <head>
       <title>Rugby Team Analysis</title>
-      <link rel="stylesheet" href="css/reset.css">
-      <link rel="stylesheet" href="css/layout.css">
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="../css/reset.css">
+      <link rel="stylesheet" href="../css/layout.css">
+      <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-      <header>
-        <h1>Rugby Scoring Model</h1>
+      <header class="container_16 std_padding">
+        <img class="left_media" src="../images/Logo.jpg" alt="">
+        <h1 class="title_text">Rugby Unleashed &#8482</h1><br>
+        <h1 class="title_text">Rugby Scoring Model</h1>
       </header>
-      <article>
+      <article class="container_16 std_padding">
         <section>
-          <input type="text" placeholder="Enter 1st Team"/>
-          <input type="text" placeholder="Enter 2nd Team"/>
-          <select name="1st Team's Offense">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-          <select name="2snd Team's Offense">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-          <select name="1st Team's Defense">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-          <select name="2snd Team's Defense">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
+          <div class="grid_3">
+            <h2>Team A</h2>
+            <h2>Team B</h2>
+          </div>
+          <div class="grid_3">
+            <input type="text" placeholder="Enter 1st Team"/>
+            <input type="text" placeholder="Enter 2nd Team"/>
+          </div>
+          <div class"grid_3">
+            <div>
+              <select name="1st Team's Offense">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <select name="2snd Team's Offense">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+            <div>
+              <select name="1st Team's Defense">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <select name="2nd Team's Defense">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+          </div>
         </section>
-        <section>
+        <section class="container_16 grid_16 std_padding">
+          <button>Run Simulation</button>
           <h1>Results of the simulation</h1>
-          
+
         </section>
       </article>
-      <footer>
+      <footer class="container_16 std_padding">
+        <h2>&copy 2015<br>Mutant Rabbit International</h2>
         <a href="../index.html">Home</a>
-        <a href="pages/simulation.html">Simulation</a>
+        <a href="about_us.html">About Us</a>
       </footer>
-      <h2>&copy 2015<br>Mutant Rabbit International</h2>
       <script src="script.js"></script>
     </body>
   </html>
