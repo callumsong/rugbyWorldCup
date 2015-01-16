@@ -6,7 +6,9 @@ function Team(name, offense, defense) { //user-defined fields
   this.points = [];
   this.totalPoints = 0;
   this.msg = "no score yet";
+  this.myBallAbility = 0;
 }
+
 Team.prototype.scoreType = function() {
   var pointsChance = Math.round(Math.random() * 10);
   var convertChance = Math.round(Math.random() * 10);
@@ -43,6 +45,8 @@ Team.prototype.addPoints = function(anArray){
 };
 allBlacks = new Team("All Blacks", 7, 8);
 eagles = new Team("Eagles", 4, 4);
+eagles.myBallAbility = (eagles.offense - allBlacks.defense)*0.5;
+allBlacks.myBallAbility = (allBlacks.offense - eagles.defense)*0.5;
 time = 80;
 possessions = 20;
 winner = "nobody";
@@ -61,7 +65,7 @@ function calculateWinner (){
 function playGame() {
   for(var i = 1; i <= possessions; i++){
   var teams = Math.random() * 10;
-  if (teams <= 5) {
+  if (teams <= 5 + eagles.myBallAbility) {
     eagles.scoreType();
     eagles.addPoints(eagles.points);
     calculateWinner();
