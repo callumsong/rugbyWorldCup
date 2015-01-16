@@ -86,6 +86,8 @@ function playGame() {
   var el = document.getElementById("MyResults");
   el.innerHTML = "<p>" + msg + "</p>";
   }
+var botEl = document.getElementById("FinaleResults");
+botEl.innerHTML = "<p>The Final Score is " + allBlacks.totalPoints + " - " + eagles.totalPoints + "</p>" + winner;
 }
 playGame();
 }
