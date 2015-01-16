@@ -43,9 +43,13 @@ Team.prototype.addPoints = function(anArray){
   }
   return this.totalPoints;
 };
+var submitMyThis = document.getElementById("submitThis");
+submitMyThis.addEventListener("click", addNewAllBlack, false);
 
-allBlacks = new Team(document.getElementById("Team A Name"), document.getElementById("Team A Offense"), document.getElementById("Team A Defense"));
-eagles = new Team("Eagles", 4, 4);
+  function addNewAllBlack(){
+allBlacks = new Team(document.getElementById("TeamA").value, document.getElementById("Team A Offense").value, document.getElementById("Team A Defense").value);
+console.log(allBlacks.name);
+eagles = new Team(document.getElementById("TeamB").value, document.getElementById("Team B Offense").value, document.getElementById("Team B Defense").value);
 eagles.myBallAbility = (eagles.offense - allBlacks.defense)*0.5;
 allBlacks.myBallAbility = (allBlacks.offense - eagles.defense)*0.5;
 time = 80;
@@ -57,33 +61,31 @@ function calculateWinner (){
     winner = " ";
   }
   else if (scoreDifference > 0){
-    winner = "Eagles";
+    winner = eagles.name;
   }
   else{
-    winner = "All Blacks";
+    winner = allBlacks.name;
   }
 }
 function playGame() {
+  var msg = "The Game has started! </br>";
   for(var i = 1; i <= possessions; i++){
   var teams = Math.random() * 10;
   if (teams <= 5 + eagles.myBallAbility) {
     eagles.scoreType();
     eagles.addPoints(eagles.points);
     calculateWinner();
-    console.log ("Eagles " + eagles.msg + " at " + i*4 + " minute(s), score is " + eagles.totalPoints + "-" + allBlacks.totalPoints + " " + winner);
+    msg += (eagles.name + " " + eagles.msg + " at " + i*4 + " minute(s), score is " + eagles.totalPoints + "-" + allBlacks.totalPoints + " " + winner + "</br>");
   }
   else {
     allBlacks.scoreType();
     allBlacks.addPoints(allBlacks.points);
     calculateWinner();
-    console.log ("All Blacks " + allBlacks.msg + " at " + i*4 + " minute(s), score is " + eagles.totalPoints + "-" + allBlacks.totalPoints + " " + winner);
+    msg += (allBlacks.name + " " + allBlacks.msg + " at " + i*4 + " minute(s), score is " + eagles.totalPoints + "-" + allBlacks.totalPoints + " " + winner + "</br>");
   }
+  var el = document.getElementById("MyResults");
+  el.innerHTML = "<p>" + msg + "</p>";
   }
 }
 playGame();
-allBlacks.addPoints(allBlacks.points);
-eagles.addPoints(eagles.points);
-console.log(eagles.points);
-console.log(allBlacks.points);
-console.log(allBlacks.totalPoints);
-console.log(eagles.totalPoints);
+}
