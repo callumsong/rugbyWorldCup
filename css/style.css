@@ -2,6 +2,7 @@ html {
   background-color: #b2b2b2;
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 20px;
+  padding: 5px;
   /*text-decoration: none;*/
 }
 
@@ -10,7 +11,12 @@ html {
   text-align: center;
 }
 
-.about_us {
+.logo {
+  width: auto;
+  height: auto;
+}
+
+.center {
   text-align: center;
 }
 
@@ -18,10 +24,26 @@ html {
   float: left;
 }
 
-.std_padding {
-  padding: 5px;
+.align {
+  padding-top: 40px;
+  text-align: right;
 }
 
-footer {
-  text-align: center;
+button {
+  vertical-align: middle;
+  text-align: left;
+}
+
+.perc15 {
+  width: 15%;
+  height: auto;
+}
+
+.perc25 {
+  width: 25%;
+  height: auto;
+}
+
+article > section {
+  display: block;
 }

@@ -8,84 +8,82 @@
       <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-      <header class="container_16 std_padding">
-        <img class="left_media" src="../images/Logo.jpg" alt="">
+      <header class="container_16">
+        <img class="left_media logo" src="../images/Logo.jpg" alt="">
         <h1 class="title_text">Rugby Unleashed &#8482</h1><br>
         <h1 class="title_text">Rugby Scoring Model</h1>
-        <p id="FinaleResults"></p>
       </header>
-      <article class="container_16 std_padding">
+      <article class="container_16">
+        <p class="title_text" id="FinaleResults"></p>
         <section>
-          <div class="grid_3">
+          <div>
             <h2>Team A</h2>
-            <h2>Team B</h2>
-          </div>
-          <div class="grid_3">
             <input type="text" placeholder="Enter 1st Team" id="TeamA"/>
-            <input type="text" placeholder="Enter 2nd Team" id="TeamB"/>
+            <select name="1st Team's Offense" id="Team A Offense">
+              <option value="Select Offense">Offense</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <select name="1st Team's Defense" id="Team A Defense">
+              <option value="Select Defense">Defense</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
           </div>
-          <div class"grid_3">
-            <div>
-              <select name="1st Team's Offense" id="Team A Offense">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-              <select name="2snd Team's Offense" id="Team B Offense">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-            </div>
-            <div>
-              <select name="1st Team's Defense" id="Team A Defense">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-              <select name="2nd Team's Defense" id="Team B Defense">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-            </div>
+          <div>
+            <h2>Team B</h2>
+            <input type="text" placeholder="Enter 2nd Team" id="TeamB"/>
+            <select name="2snd Team's Offense" id="Team B Offense">
+              <option value="Select Offense">Offense</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <select name="2nd Team's Defense" id="Team B Defense">
+              <option value="Select Defense">Defense</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
           </div>
         </section>
-        <section class="container_16 grid_16 std_padding">
+        <section class="container_16 grid_16">
           <button id="submitThis">Run Simulation</button>
           <h1>Results of the simulation</h1>
         <p id="MyResults"></p>
         </section>
       </article>
-      <footer class="container_16 std_padding">
+      <footer class="container_16 center">
         <h2>&copy 2015<br>Mutant Rabbit International</h2>
         <a href="../index.html">Home</a>
         <a href="about_us.html">About Us</a>
