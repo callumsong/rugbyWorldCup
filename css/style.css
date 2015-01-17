@@ -1,9 +1,15 @@
 html {
   background-color: #b2b2b2;
   font-family: 'Gloria Hallelujah', cursive;
-  font-size: 20px;
-  padding: 5px;
-  /*text-decoration: none;*/
+}
+
+strong{
+  text-decoration: underline;
+}
+
+.separator {
+  background-color: black;
+  height: 10px;
 }
 
 .title_text {
@@ -24,26 +30,13 @@ html {
   float: left;
 }
 
+.right_media {
+  float: right;
+}
+
 .align {
   padding-top: 40px;
   text-align: right;
 }
 
-button {
-  vertical-align: middle;
-  text-align: left;
-}
 
-.perc15 {
-  width: 15%;
-  height: auto;
-}
-
-.perc25 {
-  width: 25%;
-  height: auto;
-}
-
-article > section {
-  display: block;
-}
