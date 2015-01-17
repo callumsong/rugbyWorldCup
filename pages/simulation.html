@@ -8,15 +8,15 @@
       <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-      <header class="container_16">
+      <header class="container">
         <img class="left_media logo" src="../images/Logo.jpg" alt="">
         <h1 class="title_text">Rugby Unleashed &#8482</h1><br>
-        <h1 class="title_text">Rugby Scoring Model</h1>
       </header>
-      <article class="container_16">
-        <p class="title_text" id="FinaleResults"></p>
-        <section>
-          <div>
+      <div class="container separator"></div>
+      <article class="container">
+        <h2 class="title_text">Rugby Scoring Model</h2>
+        <section class="container">
+          <div class="">
             <h2>Team A</h2>
             <input type="text" placeholder="Enter 1st Team" id="TeamA"/>
             <select name="1st Team's Offense" id="Team A Offense">
@@ -77,13 +77,18 @@
             </select>
           </div>
         </section>
-        <section class="container_16 grid_16">
+        <section class="container grid_16">
           <button id="submitThis">Run Simulation</button>
-          <h1>Results of the simulation</h1>
-        <p id="MyResults"></p>
         </section>
-      </article>
-      <footer class="container_16 center">
+        <div class="container separator"></div>
+        <section>
+          <h1 class="title_text">Results of the simulation</h1>
+          <p class="title_text right_media" id="FinaleResults"></p>
+          <p id="MyResults"></p>
+        </section>
+      </article>       
+      <div class="container separator"></div>
+      <footer class="container center">
         <h2>&copy 2015<br>Mutant Rabbit International</h2>
         <a href="../index.html">Home</a>
         <a href="about_us.html">About Us</a>
