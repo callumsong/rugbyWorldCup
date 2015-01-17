@@ -3,6 +3,10 @@ html {
   font-family: 'Gloria Hallelujah', cursive;
 }
 
+strong{
+  text-decoration: underline;
+}
+
 .separator {
   background-color: black;
   height: 10px;
@@ -34,4 +38,5 @@ html {
   padding-top: 40px;
   text-align: right;
 }
+
 
